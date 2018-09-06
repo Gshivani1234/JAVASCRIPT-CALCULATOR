@@ -13,12 +13,12 @@
 	//variables
 	var viewer=ele("#viewer"),
 	equals=ele("#equals"),
-	nums=ele("#nums"),
-	ops=ele("#ops"),
+	nums=ele(".num"),
+	ops=ele(".ops"),
 	newnum="",
 	oldnum="",
-	resultnum="",
-	operator="";
+	resultnum,
+	operator;
 
 	//when number is clicked.
 	var setnum=function()
@@ -103,12 +103,12 @@
 
 	//for numbers
 	for(i=0,l=nums.length();i<l;i++)
-		nums[i]=onclick = setnum;
+		nums[i].onclick = setnum;
     
 
     //for operators
     for(i=0,l=ops.length();i<l;i++)
-		ops[i]=onclick = movenum;
+		ops[i].onclick = movenum;
     
     //for equals sign
     equals.onclick=displaynum;
